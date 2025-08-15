@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { FaGlobeAsia, FaBars, FaTimes, FaSearch, FaChevronDown, FaArrowRight } from 'react-icons/fa';
 import { useAuth } from '../../context/AuthContext';
 import LogoutButton from '../common/LogoutButton';
-import heroImage from '../assets/image/Hero-section.jpg';
 
 const Header = ({ transparent = false }) => {
   const { t, i18n } = useTranslation();
@@ -37,7 +36,7 @@ const Header = ({ transparent = false }) => {
       {/* Background image only for non-transparent header */}
       {!transparent && (
         <div className="absolute inset-0 bg-cover bg-center" style={{ 
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(${heroImage}) ',
+          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(/images/Hero-section.jpg)',
           backgroundPosition: 'center 60%'
         }}></div>
       )}

@@ -1,7 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
-import layoutImage from '../assets/images/Layoutimage.jpg';
 
 const Layout = ({ children }) => {
   console.log('Layout component rendered');
@@ -14,7 +13,7 @@ const Layout = ({ children }) => {
         <div className="relative">
           {/* Shared background for header and hero section on homepage */}
           <div className="fixed inset-0 bg-cover bg-center z-0" style={{ 
-            backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${layoutImage})',
+            backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(/images/Layoutimage.jpg)',
             backgroundPosition: 'center 60%',
             backgroundAttachment: 'fixed',
             height: '100vh'

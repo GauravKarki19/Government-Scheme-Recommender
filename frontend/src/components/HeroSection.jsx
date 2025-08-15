@@ -80,7 +80,7 @@ const HeroSection = () => {
               <div className="relative">
                 {/* image */}
                 <img
-                  src="/src/assets/images/Hero-section.jpg"
+                  src="/images/Hero-section.jpg"
                   alt="IMAGE"
                   className="w-full h-auto rounded-2xl shadow-2xl border-4 border-white transform -rotate-2 hover:rotate-0 transition-transform duration-500"
                 />
