@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: government-scheme-checker
+    env: node
+    plan: free
+    buildCommand: npm run install-deps && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        sync: false
+      - key: MONGO_URI
+        sync: false
+      - key: MONGO_DB
+        value: schemechecker

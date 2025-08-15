@@ -1,0 +1,31 @@
+{
+  "name": "government-scheme-checker",
+  "version": "1.0.0",
+  "description": "Government Scheme Eligibility Checker - Full Stack Application",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "cd server && npm start",
+    "build": "cd frontend && npm install && npm run build",
+    "dev": "concurrently \"cd server && npm run dev\" \"cd frontend && npm run dev\"",
+    "install-deps": "cd server && npm install && cd ../frontend && npm install",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
+  },
+  "keywords": [
+    "government",
+    "schemes",
+    "eligibility",
+    "welfare",
+    "react",
+    "express",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
