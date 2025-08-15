@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { FaGlobeAsia, FaBars, FaTimes, FaSearch, FaChevronDown, FaArrowRight } from 'react-icons/fa';
 import { useAuth } from '../../context/AuthContext';
 import LogoutButton from '../common/LogoutButton';
+import heroImage from '../assets/image/Hero-section.jpg';
 
 const Header = ({ transparent = false }) => {
   const { t, i18n } = useTranslation();
@@ -36,7 +37,7 @@ const Header = ({ transparent = false }) => {
       {/* Background image only for non-transparent header */}
       {!transparent && (
         <div className="absolute inset-0 bg-cover bg-center" style={{ 
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("https://img.freepik.com/free-photo/view-woman-working-agricultural-sector-celebrate-labour-day-women_23-2151252039.jpg?t=st=1747853623~exp=1747857223~hmac=fa6be5142aef643285de9afb6eeddfe0a47754ed239ea330b8f30580d160ed3c&w=1380")',
+          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(${heroImage}) ',
           backgroundPosition: 'center 60%'
         }}></div>
       )}
