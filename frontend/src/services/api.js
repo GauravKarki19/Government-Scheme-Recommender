@@ -1,7 +1,9 @@
 import axios from 'axios';
 
-// Use env var if provided, otherwise use same-origin relative path
-const API_URL = (import.meta.env.VITE_API_URL?.replace(/\/$/, '')) || '/api';
+// Use same-origin in production; in dev use VITE_API_URL or fallback to /api
+const API_URL = import.meta.env.PROD
+  ? '/api'
+  : (import.meta.env.VITE_API_URL?.replace(/\/$/, '')) || '/api';
 
 export const fetchSchemes = async () => {
   try {
