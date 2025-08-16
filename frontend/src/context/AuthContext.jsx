@@ -1,7 +1,11 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api';
+// Use same-origin in production; in dev use VITE_API_URL or fallback to /api
+const API_URL = import.meta.env.PROD
+  ? '/api'
+  : (import.meta.env.VITE_API_URL?.replace(/\/$/, '')) || '/api';
+
 const AuthContext = createContext(null);
 
 export const useAuth = () => useContext(AuthContext);
