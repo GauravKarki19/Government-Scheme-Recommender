@@ -36,7 +36,7 @@ const Header = ({ transparent = false }) => {
       {/* Background image only for non-transparent header */}
       {!transparent && (
         <div className="absolute inset-0 bg-cover bg-center" style={{ 
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(/images/Hero-section.jpg)',
+          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(/images/Layoutimage.jpg)',
           backgroundPosition: 'center 60%'
         }}></div>
       )}
